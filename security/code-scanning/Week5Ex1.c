@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <env.h>
 
 #define BUFSIZE 256
 
@@ -10,11 +9,9 @@ int main(int argc, char** argv) {
   char cmd[BUFSIZE] = "wc -c < ";
 
   
-  
-  
   strncat(cmd, argv[1], BUFSIZE);
 
-  clearenv();
+  int i = clearenv();
   system(cmd);
   
 }
