@@ -7,27 +7,19 @@
 int main(int argc, char** argv) {
   
   char cmd[BUFSIZE] = "wc -c < ";
-  //char* fl;
   int i = BUFSIZE - sizeof(cmd);
 
-  if (sizeof(argv[1] >= i) || !strcmp(argv[1], ";rm")) // would need to call something to check if input is sanitized
+  // check if input is longer than buffer
+  // Check if input is sanitized. (Would need to call something here to check if input is sanitized)
+  if (sizeof(argv[1] >= i) || !strcmp(argv[1], ";rm")) 
   {
     return 0;
   }
   else 
   {
-    
     strncat(cmd, argv[1], BUFSIZE-1);
     clearenv();
     system(cmd);  
-    if (!strcmp(cmd, ";rm"))  // would need to call something to sanitize the input
-    {
-        return 0;
-    } 
-    else 
-     {
-        system(cmd);
-     }
   }
 
 }
