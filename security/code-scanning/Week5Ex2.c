@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
-#define BUFFSIZE 256
 
 int main(int argc, char** argv) {
-  char *fileName = argv[1];
-  readfile(fileName);
+  const char *fileName = argv[1];
+ // readfile(fileName);
 
 }
 
+/*
 int read_file(const char *filename) {
 FILE* ptr = fopen(filename, "r");
 
@@ -25,3 +24,4 @@ printf("%s", buff);
 
 return 0; 
 }
+*/
