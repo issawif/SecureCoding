@@ -3,11 +3,11 @@
 
 int main(int argc, char** argv) {
   const char *fileName = argv[1];
- // readfile(fileName);
+  read_file(fileName);
 
 }
 
-/*
+
 int read_file(const char *filename) {
 FILE* ptr = fopen(filename, "r");
 
@@ -24,4 +24,4 @@ printf("%s", buff);
 
 return 0; 
 }
-*/
+
