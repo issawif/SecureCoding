@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
   char cmd[BUFSIZE] = "wc -c < ";
 
   
-  strncat(cmd, argv[1], BUFSIZE);
+  strncat(cmd, argv[1], sizeof(cmd)-1);
 
   int i = clearenv();
   system(cmd);
