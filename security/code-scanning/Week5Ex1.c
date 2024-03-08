@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
   //char* fl;
   int i = BUFSIZE - sizeof(cmd);
 
-  if (sizeof(argv[1] >= i)
+  if (sizeof(argv[1] >= i))
   {
     return 0;
   }
