@@ -4,7 +4,7 @@
 int main(int argc, char** argv) {
   char *filename = argv[1];
   
-
+/*
 
   FILE* ptr = fopen(filename, "r");
   
@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
   while (fgets(buff, BUFFSIZE, ptr) != NULL) {
   printf("%s", buff);
   }
-  
+  */
   return 0; 
 }
 
