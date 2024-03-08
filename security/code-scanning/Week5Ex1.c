@@ -11,28 +11,17 @@ int main(int argc, char** argv) {
   int i = BUFSIZE - sizeof(cmd);
   
   strncpy(fl, argv[1], i)
-  
-  
-  
-  
-  if (sizeof(fl) > i)
-  {
-      strncat(cmd, fl, BUFSIZE-1);
-      clearenv();
+  strncat(cmd, fl, BUFSIZE-1);
+
+  clearenv();
     
-      if (!strcmp(cmd, ";rm")) 
-      {
-         return 0;
-      } 
-      else 
-      {
-        system(cmd);
-      }
-  }
-  else 
+  if (!strcmp(cmd, ";rm")) 
   {
       return 0;
-  }
-  
-  
+  } 
+  else 
+   {
+      system(cmd);
+   }
+    
 }
