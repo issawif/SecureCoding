@@ -8,10 +8,9 @@ int main(int argc, char** argv) {
   
   char cmd[BUFSIZE] = "wc -c < ";
   char* fl = argv[1];
-  
-  strncat(cmd, argv[1], sizeof(cmd)-1);
-  clearenv();
 
+  strncat(cmd, fl, sizeof(cmd)-1);
+  clearenv();
 
   if (!strcmp(cmd, ";rm")) {
      return 0;
