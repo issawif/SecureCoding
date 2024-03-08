@@ -7,7 +7,9 @@
 int main(int argc, char** argv) {
   
   char cmd[BUFSIZE] = "wc -c < ";
-
+  
+  int i = BUFSIZE - sizeof(cmd) - 1;
+  char userFile[i] = argv[1];
   
   strncat(cmd, argv[1], sizeof(cmd)-1);
 
