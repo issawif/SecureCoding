@@ -9,13 +9,23 @@ int main(int argc, char** argv) {
   char cmd[BUFSIZE] = "wc -c < ";
   char* fl = argv[1];
 
-  strncat(cmd, fl, sizeof(cmd)-1);
-  clearenv();
-
-  if (!strcmp(cmd, ";rm")) {
-     return 0;
-  } else {
-    system(cmd);
+  if (sizeof(fl) > BUFSIZE - sizeof(cmd))
+  {
+      strncat(cmd, fl, BUFSIZE-1);
+      clearenv();
+    
+      if (!strcmp(cmd, ";rm")) 
+      {
+         return 0;
+      } 
+      else 
+      {
+        system(cmd);
+      }
+  }
+  else 
+  {
+      return 0;
   }
   
   
