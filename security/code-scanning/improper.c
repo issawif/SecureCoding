@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -8,11 +8,8 @@ int main(int argc, char** argv) {
   char command1[1000] = {0};
   
   snprintf(command1, 1000, "ls %s", userName);
-
-
- if (!strcmp(command1, ";rm")) {
-    die("Invalid library specified\n");
-      
+  if (!strcmp(command1, ";rm")) {
+     return 0;
   } else {
     system(command1);
   }
