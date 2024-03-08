@@ -3,6 +3,11 @@
  
 #define BUFFSIZE 256
 
+void main () {
+  readfile("myfile.txt");
+
+}
+
 int read_file(const char *filename) {
 FILE* ptr = fopen(filename, "r");
 
