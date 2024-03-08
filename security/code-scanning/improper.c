@@ -6,6 +6,6 @@ int main(int argc, char** argv) {
   char *userName = argv[1];
   
     char command1[1000] = {0};
-    sprintf(command1, "ls %1000s", userName);
+    snprintf(command1, 1000, "ls %s", userName);
     system(command1);
 }
