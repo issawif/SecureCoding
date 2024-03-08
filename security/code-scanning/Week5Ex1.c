@@ -7,7 +7,7 @@
 int main(int argc, char** argv) {
   
   char cmd[BUFSIZE] = "wc -c < ";
-  char *fl[BUFSIZE] = argv[1];
+  char* fl = argv[1];
   
   strncat(cmd, argv[1], sizeof(cmd)-1);
   clearenv();
