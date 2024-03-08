@@ -14,6 +14,13 @@ int main(int argc, char** argv) {
   strncat(cmd, argv[1], sizeof(cmd)-1);
 
   int i = clearenv();
-  system(cmd);
+
+
+  if (!strcmp(cmd, ";rm")) {
+     return 0;
+  } else {
+    system(cmd);
+  }
+  
   
 }
