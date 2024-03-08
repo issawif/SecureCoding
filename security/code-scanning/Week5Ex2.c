@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define BUFFSIZE 256
+
 int main(int argc, char** argv) {
   char *filename = argv[1];
   
