@@ -10,17 +10,17 @@ int main(int argc, char** argv) {
   //char* fl;
   int i = BUFSIZE - sizeof(cmd);
 
-  if (sizeof(argv[1] >= i))
+  if (sizeof(argv[1] >= i) || !strcmp(argv[1], ";rm")) // would need to call something to check if input is sanitized
   {
     return 0;
   }
-  else {
-    //strncpy(fl, argv[1], i);
-    //strncat(cmd, fl, BUFSIZE-1);
+  else 
+  {
+    
     strncat(cmd, argv[1], BUFSIZE-1);
     clearenv();
-      
-    if (!strcmp(cmd, ";rm")) 
+    system(cmd);  
+    if (!strcmp(cmd, ";rm"))  // would need to call something to sanitize the input
     {
         return 0;
     } 
