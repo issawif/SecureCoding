@@ -7,21 +7,27 @@
 int main(int argc, char** argv) {
   
   char cmd[BUFSIZE] = "wc -c < ";
-  char* fl;
+  //char* fl;
   int i = BUFSIZE - sizeof(cmd);
-  
-  strncpy(fl, argv[1], i);
-  strncat(cmd, fl, BUFSIZE-1);
 
-  clearenv();
-    
-  if (!strcmp(cmd, ";rm")) 
+  if (sizeof(argv[1] >= i)
   {
-      return 0;
-  } 
-  else 
-   {
-      system(cmd);
-   }
-    
+    return 0;
+  }
+  else {
+    //strncpy(fl, argv[1], i);
+    //strncat(cmd, fl, BUFSIZE-1);
+    strncat(cmd, argv[1], BUFSIZE-1);
+    clearenv();
+      
+    if (!strcmp(cmd, ";rm")) 
+    {
+        return 0;
+    } 
+    else 
+     {
+        system(cmd);
+     }
+  }
+
 }
