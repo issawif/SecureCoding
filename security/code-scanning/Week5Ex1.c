@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
   char* fl;
   int i = BUFSIZE - sizeof(cmd);
   
-  strncpy(fl, argv[1], i)
+  strncpy(fl, argv[1], i);
   strncat(cmd, fl, BUFSIZE-1);
 
   clearenv();
