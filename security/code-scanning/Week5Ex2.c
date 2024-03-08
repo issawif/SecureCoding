@@ -2,13 +2,10 @@
 #include <stdlib.h>
 
 int main(int argc, char** argv) {
-  const char *fileName = argv[1];
-  read_file(fileName);
-
-}
+  const char *filename = argv[1];
+  
 
 
-int read_file(const char *filename) {
 FILE* ptr = fopen(filename, "r");
 
 if (ptr == NULL) {
