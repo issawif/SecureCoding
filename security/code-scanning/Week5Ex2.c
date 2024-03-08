@@ -3,8 +3,9 @@
  
 #define BUFFSIZE 256
 
-void main () {
-  readfile("myfile.txt");
+int main(int argc, char** argv) {
+  char *fileName = argv[1];
+  readfile(fileName);
 
 }
 
