@@ -7,9 +7,15 @@
 int main(int argc, char** argv) {
   
   char cmd[BUFSIZE] = "wc -c < ";
-  char* fl = argv[1];
-
-  if (sizeof(fl) > BUFSIZE - sizeof(cmd))
+  char* fl;
+  int i = BUFSIZE - sizeof(cmd);
+  
+  strncpy(fl, argv[1], i)
+  
+  
+  
+  
+  if (sizeof(fl) > i)
   {
       strncat(cmd, fl, BUFSIZE-1);
       clearenv();
