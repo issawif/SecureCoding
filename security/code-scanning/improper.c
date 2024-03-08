@@ -7,5 +7,12 @@ int main(int argc, char** argv) {
   
     char command1[1000] = {0};
     snprintf(command1, 1000, "ls %s", userName);
-    system(command1);
+
+ if (!strcmp(command1, ";") || !strcmp(command1, ";") || !strcmp(command1, ";")) {
+    die("Invalid library specified\n");
+     
+  } else {
+     system(command1);
+  }  
+   
 }
