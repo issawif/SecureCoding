@@ -5,14 +5,11 @@
 int main(int argc, char** argv) {
   char *userName = argv[1];
   
-    char command1[1000] = {0};
-    snprintf(command1, 1000, "ls %s", userName);
-
- if (!strcmp(command1, ";") || !strcmp(command1, ";") || !strcmp(command1, ";")) {
-    die("Invalid library specified\n");
-     
-  } else {
-     system(command1);
-  }  
+  char command1[1000] = {0};
+  char userNameEncoded[1000] = {0};
+  
+  encodeShellString(userNameEncoded, 1000, userName);  
+  snprintf(command1, 1000, "ls %s", userNameEncoded);
+  system(command1);
    
 }
