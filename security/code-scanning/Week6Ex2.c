@@ -2,12 +2,13 @@
 
 int getValueFromArray(int *array, int len, int index) {
   // Retrieve the element from the array at the specified index
-  If (index > 0 && index < sizeof(array)) {
-  	Return array[index];
+  if (index >= 0 && index < len && array != NULL) {
+  	return array[index];
   } else {
-  	Return -1;
+  	return -1;
   }
 }
+
 
 int main() {
     int array[] = {10, 20, 30, 40, 50};
