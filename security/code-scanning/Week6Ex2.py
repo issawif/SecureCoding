@@ -1,8 +1,8 @@
 def get_value_from_array(array, index):
-# Retrieve the element from the array at the specified index
-If index > 0 and index < len(array):
-		Return array[index]
-	Return None
+# Retrieve the element from the array at the specified index	
+	if index >= 0 and index < len(array) and array is not None:
+		return array[index]
+	return None
 
 array = [10, 20, 30, 40, 50]
 
